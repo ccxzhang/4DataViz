@@ -91,3 +91,6 @@ In light of the above figure, we can find that one supports democracy, freedom, 
   </div>
   <figcaption font-size="12px"> The figure displays the eigenvalue's and cumulative explained variance’s changes along with the number of components. </figcaption>
 </div>
+
+
+[WordCloud](/dataviz/wordcloud.png)
