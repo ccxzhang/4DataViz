@@ -19,10 +19,9 @@ Ideology has been a central concept muddled by diverse uses in the study of poli
 </div>
 
 
-The study employs the [_zuobiao_](http://www.zuobiao.me/) survey (Chinese Political Compass) that contains 50 questions about a wide array of critical issues in China (Chinese Political Compass, 2018). A group of graduate students and researchers at the Peking University designed the survey, the same source used in Pan and Xu (2018)’s study.
+The study employs the [_zuobiao_](http://www.zuobiao.me/) survey (Chinese Political Compass) that contains 50 questions about a wide array of critical issues in China. Peking University's graduate students and researchers designed the survey, the same source used in [Pan and Xu's study](https://www.journals.uchicago.edu/doi/abs/10.1086/694255) in 2018.
 
-
-
+Other than the survey data, the study obtains the data from Zhihu by a scraper. Zhihu is a Chinese version of Quora and attracts millions of users to share opinions on a specific question. The data is from a specific question on Zhihu about perceiving nationalism. That question has more than 500 answers with more than 6,000 comments and 14,800 votes.
 
 <div>
   <div style="position:relative;padding-top:56.7%;">
@@ -102,5 +101,8 @@ The above figure displays 9 out of 12 topics’ word clouds:
 - Topic 3 is primarily about 国与国 (state-to-state);
 - Topic 4 involves 乌鲁克 (Uruk) and 苏美尔 (Sumerian);
 - Topic 5 and 9 are similar and encompass [Sun Yat-sen’s](https://en.wikipedia.org/wiki/Three_Principles_of_the_People) 民权主义 (Government by the People) and 民生主义 (People's welfare/livelihood). Topic 5 exclusively contains 正统 (orthodoxy) and [汉奸](https://en.wikipedia.org/wiki/Hanjian) (a pejorative term for a traitor to the Han Chinese), while topic 9 leans towards 特权 (privilege) and 阶级矛盾 (class conflict);
-- Topic 6 sheds light on 祖宗 ancestors and [夷](https://en.wiktionary.org/wiki/%E5%A4%B7#Definitions) (barbarian/foreigners); 
+- Topic 6 sheds light on 祖宗 ancestors and [夷](https://en.wiktionary.org/wiki/%E5%A4%B7#Definitions) (barbarian/foreigners) on the one side, and 无产者 (Proletariat) on the other;
 - Topic 7 is about 犹太人 (Jewish) and 以色利 (Israel), both of which are closely related to Zionism;
+- Topic 8 is similar to topic 5 in terms of 卖国 and 狗, and both are traitors’ different expressions in Chinese.
+
+## Discussion
