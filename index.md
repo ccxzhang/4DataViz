@@ -66,7 +66,10 @@ $$\operatorname{logit} (p_i)=\ln \left({\frac {p_i}{1-p_i}}\right)=\beta _{0}+\b
 
 $$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i + \beta_{2}D_i)})+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
 
-where $I_{i}$ represents the each index and $D_{i}$ represents the demographic variables.
+where $\I_{i}$ represents the each index and $\D_{i}$ represents the demographic variables.
+
+As the below left figure reveals, one that leans towards democracy, freedom, and the market is© more likely to support information transparency under the crisis, while the supporter of nationalism or/and traditionalism is less likely to agree. If one inclines to the socialist ideology, he or she may also agree. Freedom is the main force driving information transparency, and Nationalism is the primary opposite factor among all the indices. The result is in line with our intuition that freedom and government domination, the usual practice of withholding information, are incompatible. Besides being male, positively associated with information transparency, the remaining demographic variables do not display a clear pattern.
+
 
 <div>
   <div style="position:relative;padding-top:56.25%;">
@@ -76,7 +79,8 @@ where $I_{i}$ represents the each index and $D_{i}$ represents the demographic v
   <figcaption font-size="12px"> The figure displays the logistic regression (under $L$1-regularization) results. </figcaption>
 </div>
 
-As the top left figure reveals, one that leans towards democracy, freedom, and the market is more likely to support information transparency under the crisis, while the supporter of nationalism or/and traditionalism is less likely to agree. If one inclines to the socialist ideology, he or she may also agree. Freedom is the main force driving information transparency, and Nationalism is the primary opposite factor among all the indices. The result is in line with our intuition that freedom and government domination, the usual practice of withholding information, are incompatible. Besides being male, positively associated with information transparency, the remaining demographic variables do not display a clear pattern.
+In light of the above figure, we can find that one supports democracy, freedom, and the market tends to disagree. One who follows traditionalism or nationalism also embraces the idea. Interestingly, respondents with a college education or above than those who fail to attend high school are more likely to agree with the statement. A possible explanation for this is that well-educated people in China may have a deeper understanding and see the flaws of freedom than the laypeople. Thus they tend to reject the idea of indiscriminate imitation. The same explanation could also apply to individuals whose income is between 150k and 300k. As for living in southwest China and being male, it is hard to figure out the exact reasons. We may attribute that phenomenon to Lasso’s arbitrary feature selections.
+
 
 ## What is Chinese talking about when they talk about nationalism?
 
