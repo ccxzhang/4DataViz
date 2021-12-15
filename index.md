@@ -92,6 +92,11 @@ In light of the above figure, we can find that one supports democracy, freedom, 
   <figcaption font-size="12px"> The figure displays the eigenvalue's and cumulative explained variance’s changes along with the number of components. </figcaption>
 </div>
 
-Here employs the Latent Dirichlet Allocation (LDA) to extract topics of a Zhihu (the Chinese version of Quora) question about “how to perceive nationalism.” Perplexity and coherence scores are measures to evaluate the model’s performance. The higher the coherence score, the more consistent the topic would be. Generally, the perplexity score would decrease along with the number of topics. The above figure displays that 12 topics seem to make the most sense. Then, the cloud of top words could help us understand each topic’s theme. 
+Here employs the Latent Dirichlet Allocation (LDA) to extract topics of a Zhihu (the Chinese version of Quora) question about “how to perceive nationalism.” Perplexity and coherence scores are measures to evaluate the model’s performance. The higher the coherence score, the more consistent the topic would be. Generally, the perplexity score would decrease along with the number of topics. The above figure displays that 12 topics seem to make the most sense. Then, the cloud of top words could help us understand each topic’s theme.
 
 ![WordCloud](/dataviz/wordcloud.png)
+
+The above figure displays 9 out of 12 topics’ word clouds:
+- Topic 1 contains 美帝 (American Imperialism), 左 (the leftist), 利维坦 (Leviathan), 五分 (five cents);
+- Topic 2 focuses on politicians and parties, including 政客(politicians), 政党 (political parties), and 党同伐异 (factionalism);
+- Topic 3 is primarily about 国与国 (state-to-state); 
