@@ -101,5 +101,6 @@ The above figure displays 9 out of 12 topics’ word clouds:
 - Topic 2 focuses on politicians and parties, including 政客(politicians), 政党 (political parties), and 党同伐异 (factionalism);
 - Topic 3 is primarily about 国与国 (state-to-state);
 - Topic 4 involves 乌鲁克 (Uruk) and 苏美尔 (Sumerian);
-- Topic 5 and 9 are similar and encompass Sun Yat-sen’s 民权主义 (Government by the People), 民生主义 (the People's welfare/livelihood)
+- Topic 5 and 9 are similar and encompass [Sun Yat-sen’s](https://en.wikipedia.org/wiki/Three_Principles_of_the_People) 民权主义 (Government by the People) and 民生主义 (People's welfare/livelihood). Topic 5 exclusively contains 正统 (orthodoxy) and [汉奸](https://en.wikipedia.org/wiki/Hanjian) (a pejorative term for a traitor to the Han Chinese), while topic 9 leans towards 特权 (privilege) and 阶级矛盾 (class conflict);
+- Topic 6 sheds light on 祖宗 ancestors and [夷](https://en.wiktionary.org/wiki/%E5%A4%B7#Definitions) (barbarian/foreigners); 
 - Topic 7 is about 犹太人 (Jewish) and 以色利 (Israel), both of which are closely related to Zionism;
