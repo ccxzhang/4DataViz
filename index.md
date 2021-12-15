@@ -76,7 +76,7 @@ As the below left figure reveals, one that leans towards democracy, freedom, and
     <iframe iframe src="dataviz/stats_result_1.html" frameborder="0" scrolling="yes"
     title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
   </div>
-  <figcaption font-size="12px"> The figure displays the logistic regression (under $L$1-regularization) results. </figcaption>
+  <figcaption font-size="12px"> The figure displays the logistic regression (under L1-regularization) results. </figcaption>
 </div>
 
 In light of the above figure, we can find that one supports democracy, freedom, and the market tends to disagree. One who follows traditionalism or nationalism also embraces the idea. Interestingly, respondents with a college education or above than those who fail to attend high school are more likely to agree with the statement. A possible explanation for this is that well-educated people in China may have a deeper understanding and see the flaws of freedom than the laypeople. Thus they tend to reject the idea of indiscriminate imitation. The same explanation could also apply to individuals whose income is between 150k and 300k. As for living in southwest China and being male, it is hard to figure out the exact reasons. We may attribute that phenomenon to Lasso’s arbitrary feature selections.
