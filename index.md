@@ -64,9 +64,9 @@ To better make the inferences, here employs the logistic regression under L1-reg
 
 $$\operatorname{logit} (p_i)=\ln \left({\frac {p_i}{1-p_i}}\right)=\beta _{0}+\beta_{1}I_i + \beta _{2}D_i $$
 
-$$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i + \beta _{2}D_i}))+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
+$$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i + \beta_{2}D_i)})+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
 
-where $I_i$ represents the each index and $D_i$ represents the demographic variables.
+where $I_{i}$ represents the each index and $D_{i}$ represents the demographic variables.
 
 <div>
   <div style="position:relative;padding-top:56.25%;">
