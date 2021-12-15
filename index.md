@@ -64,7 +64,7 @@ To better make the inferences, here employs the logistic regression under L1-reg
 
 $$\operatorname{logit} (p_i)=\ln \left({\frac {p_i}{1-p_i}}\right)=\beta _{0}+\beta_{1}I_i + \beta _{2}D_i $$
 
-$$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i) + \beta _{2}D_i})+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
+$$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i + \beta _{2}D_i}))+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
 
 where $I_i$ represents the each index and $D_i$ represents the demographic variables.
 
@@ -77,3 +77,13 @@ where $I_i$ represents the each index and $D_i$ represents the demographic varia
 </div>
 
 As the top left figure reveals, one that leans towards democracy, freedom, and the market is more likely to support information transparency under the crisis, while the supporter of nationalism or/and traditionalism is less likely to agree. If one inclines to the socialist ideology, he or she may also agree. Freedom is the main force driving information transparency, and Nationalism is the primary opposite factor among all the indices. The result is in line with our intuition that freedom and government domination, the usual practice of withholding information, are incompatible. Besides being male, positively associated with information transparency, the remaining demographic variables do not display a clear pattern.
+
+## What is Chinese talking about when they talk about nationalism?
+
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/ldastats.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The figure displays the eigenvalue's and cumulative explained variance’s changes along with the number of components. </figcaption>
+</div>
