@@ -93,4 +93,4 @@ In light of the above figure, we can find that one supports democracy, freedom, 
 </div>
 
 
-[WordCloud](/dataviz/wordcloud.png)
+![WordCloud](/dataviz/wordcloud.png)
