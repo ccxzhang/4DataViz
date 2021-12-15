@@ -1,37 +1,79 @@
-## Welcome to GitHub Pages
+---
+layout: default
+---
 
-You can use the [editor on GitHub](https://github.com/ccxzhang/4dataviz/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Introduction
 
-### Markdown
+Ideology has been a central concept muddled by diverse uses in the study of politics. Converse perhaps provided a classical operationalization of ideology-- a “belief system” that represents the configuration of attitudes and ideas.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Data
+### Source
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/survey_statistics.html" frameborder="0" scrolling="no"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The map above displays the number of responses, the average age of respondents, the percentage of male respondents, and the percentage of respondents holding a college degree or above. </figcaption>
+</div>
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+The study employs the [_zuobiao_](http://www.zuobiao.me/) survey (Chinese Political Compass) that contains 50 questions about a wide array of critical issues in China (Chinese Political Compass, 2018). A group of graduate students and researchers at the Peking University designed the survey, the same source used in Pan and Xu (2018)’s study.
 
-1. Numbered
-2. List
 
-**Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
-```
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+<div>
+  <div style="position:relative;padding-top:56.7%;">
+    <iframe iframe src="dataviz/stacked_barplot.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The map above presents the some demographic variables. </figcaption>
+</div>
 
-### Jekyll Themes
+Each question in the survey is on a four-point Likert scale– “strongly disagree (1),” “disagree (2),” “agree (3),” and “strongly agree (4).” Q5 measures people’s perception of replicating western-style freedom in China, and Q3 sets up a hypothetical yet usual situation in China to let people make the judgment. As the figure above displays, around 55% of respondents disagree with the statement that indiscriminately imitating western-style freedom of speech will lead to social disorder in China. In comparison, 45% of respondents agree or strongly agree. Despite the increasing risks of social unrest, 47% of respondents support transparency under the crisis, and 53% disagree with the statement.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ccxzhang/4dataviz/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Q5 and Q3 reveal that respondents favor information transparency under the crisis, a key component of democratic accountability, yet reject the idea of imitating western-style freedom. Although the term “indiscriminate” in Q5 leads respondents to disagree with the statement, the underlying preferences should be consistent, suggesting that people who support information transparency should also promote free speech or vice versa, despite the cost of bringing social disorder.
 
-### Support or Contact
+## Methods
+### Principle Component Analysis (PCA)
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/screeplot.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The figure displays the eigenvalue's and cumulative explained variance’s changes along with the number of components. </figcaption>
+</div>
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+50 questions on ideology can make one confused about which one matters. As a frequently-used dimension-reduction technique, PCA can remove the noise by reducing a large number of features to a few principal components (PCs). Rather than the random guess, Kaiser’s rule, which is to retain components whose eigenvalue is greater than 1, can help decide the best number of components. The optimal number of PCs should be 10. Meanwhile, 10 PCs merely explain 46.7% of the total variance, and we lose more than half of the information.  
+
+### Synthetic Index Approach
+
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/distplot.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The figure displays the distribution of each index.</figcaption>
+</div>
+
+The study manually creates synthetic indices based on questions revolving around the same theme. Building on previous studies, the survey questions are classified into seven themes: _Democracy_, _Freedom_, _Market_, _Socialism_, _Globalization_, _Traditionalism_, and _Nationalism_. Each question is labeled as +1 to represent the support and -1 to represent the non-support of one specific theme. Each index is a combination of such values. The mean of each index is 0.128 for _Democracy_, -0.525 for _Freedom_, -0.506 for _Market_, 1,556 for _Socialism_, -1.057 for _Globalization_, 0.755 for _Traditionalism_, and 1.007 for _Nationalism_. These metrics portray a fictitious average respondent in China: one slightly favors democracy, looks slightly conservative, believes socialism and traditional Chinese culture, prioritizes nationalism, and is suspicious of the free market and economic globalization.
+
+To better make the inferences, here employs the logistic regression under L1-regularization for feature selections. The model is displayed as below:
+
+$$\operatorname{logit} (p_i)=\ln \left({\frac {p_i}{1-p_i}}\right)=\beta _{0}+\beta_{1}I_i + \beta _{2}D_i $$
+
+$$ -\sum_{i=1}^N\bigg[-{\ln(1+e^{(\beta _{0}+\beta _{1}x_i) + \beta _{2}D_i})+y_i \left(\beta _{0}+\beta_{1}I_i+ \beta _{2}D_i\right)\bigg]}+\lambda\sum_{j=1}^p{|\beta_j}| $$
+
+where $I_i$ represents the each index and $D_i$ represents the demographic variables.
+
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/stats_result_1.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The figure displays the logistic regression (under $L$1-regularization) results. </figcaption>
+</div>
+
+As the top left figure reveals, one that leans towards democracy, freedom, and the market is more likely to support information transparency under the crisis, while the supporter of nationalism or/and traditionalism is less likely to agree. If one inclines to the socialist ideology, he or she may also agree. Freedom is the main force driving information transparency, and Nationalism is the primary opposite factor among all the indices. The result is in line with our intuition that freedom and government domination, the usual practice of withholding information, are incompatible. Besides being male, positively associated with information transparency, the remaining demographic variables do not display a clear pattern.
