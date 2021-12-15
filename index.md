@@ -99,4 +99,7 @@ Here employs the Latent Dirichlet Allocation (LDA) to extract topics of a Zhihu 
 The above figure displays 9 out of 12 topics’ word clouds:
 - Topic 1 contains 美帝 (American Imperialism), 左 (the leftist), 利维坦 (Leviathan), 五分 (five cents);
 - Topic 2 focuses on politicians and parties, including 政客(politicians), 政党 (political parties), and 党同伐异 (factionalism);
-- Topic 3 is primarily about 国与国 (state-to-state); 
+- Topic 3 is primarily about 国与国 (state-to-state);
+- Topic 4 involves 乌鲁克 (Uruk) and 苏美尔 (Sumerian);
+- Topic 5 and 9 are similar and encompass Sun Yat-sen’s 民权主义 (Government by the People), 民生主义 (the People's welfare/livelihood)
+- Topic 7 is about 犹太人 (Jewish) and 以色利 (Israel), both of which are closely related to Zionism;
