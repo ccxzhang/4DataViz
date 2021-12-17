@@ -4,9 +4,7 @@ layout: default
 
 
 ## Introduction
-
-Ideology has been a central concept muddled by diverse uses in the study of politics. Philip Converse perhaps provided a classical operationalization of ideology-- a “belief system” that represents the configuration of attitudes and ideas.
-
+Ideology has been a central concept muddled by diverse uses in the study of politics. Philip Converse perhaps provided a classical operationalization of ideology-- a “belief system” representing the configuration of attitudes and ideas. In China, where the state could dominate the private sphere, comprehending the ideological landscape is crucial to capture Chinese politics and even Chinese society’s every aspect.
 
 ## Data
 ### Source
@@ -95,7 +93,7 @@ In light of the above figure, we can find that one supports democracy, freedom, 
     <iframe iframe src="dataviz/ldastats.html" frameborder="0" scrolling="yes"
     title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
   </div>
-  <figcaption font-size="12px"> The figure displays the perplexity and coherence scores along with the number of components. </figcaption>
+  <figcaption font-size="12px"> The figure displays the perplexity and coherence scores along with the number of topics. </figcaption>
 </div>
 
 Here employs the Latent Dirichlet Allocation (LDA) to extract topics of a Zhihu (the Chinese version of Quora) question about “how to perceive nationalism.” Perplexity and coherence scores are measures to evaluate the model’s performance. The higher the coherence score, the more consistent the topic would be. Generally, the perplexity score would decrease along with the number of topics. The above figure displays that 12 topics seem to make the most sense. Then, the cloud of top words could help us understand each topic’s theme.
@@ -113,3 +111,5 @@ The above figure displays 9 out of 12 topics’ word clouds:
 - Topic 8 is similar to topic 5 in terms of 卖国 and 狗, and both are traitors’ different expressions in Chinese.
 
 ## Discussion
+
+Attitudes towards democracy, market, nationalism largely constitute China’s ideological landscape. To look at discourses closely, we may realize ethnicity (Han, Zionism, and traitor), international relations (state-to-state and Imperialism), Sun Yat-sen, and Socialist’s legacy play a pivotal role in shaping people’s understanding of nationalism.
