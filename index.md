@@ -64,13 +64,13 @@ The study manually creates synthetic indices based on questions revolving around
   <figcaption font-size="12px"> The figure displays the distribution of each index.</figcaption>
 </div>
 
-To better make the inferences, here employs the logistic regression under L1-regularization for feature selections. The model is displayed as below:
+To better make the inferences, here employs the logistic regression under $L$1-regularization for feature selections. The model is displayed as below:
 
-$$\mbox{Pr}(Q=1|X=x)=\frac{e^{\beta_0+\beta^Tx}}{1+e^{\beta_0+\beta^Tx}},$$
+$$\mbox{Pr}(Q=1|X=x)=\frac{e^{\beta_0+\beta_kx}}{1+e^{\beta_0+\beta_kx}}$$
 
-$$\min_{(\beta_0, \beta) \in \mathbb{R}^{p+1}} -\left[\frac{1}{N} \sum_{i=1}^N y_i \cdot (\beta_0 + x_i^T \beta) - \log (1+e^{(\beta_0+x_i^T \beta)})\right] + \lambda\sum_{j=1}^p{|\beta_j}| $$
+$$\min_{(\beta_0, \beta_k) \in \mathbb{R}^{p+1}} -\left[\frac{1}{N} \sum_{i=1}^N y_i \cdot (\beta_0 + \beta_kx_i) - \log (1+e^{(\beta_0+\beta_kx_i)})\right] + \lambda\sum_{j=1}^p{|\beta_j}| s$$
 
-where $I_{i}$ represents each response $i$'s index matrix and $D_{i}$ represents the matrix of demographic variables.
+where $k$ $\in$ $\{Index, Demographic\}$ and $\beta_k$ represents the coefficient of $k$'th variable of the set, and we are trying to find the $\beta_0$ and $\beta_k$ that minimizes the error under the $L$-1 regularization.
 
 As the below left figure reveals, one that leans towards democracy, freedom, and the market is© more likely to support information transparency under the crisis, while the supporter of nationalism or/and traditionalism is less likely to agree. If one inclines to the socialist ideology, he or she may also agree. Freedom is the main force driving information transparency, and Nationalism is the primary opposite factor among all the indices. The result is in line with our intuition that freedom and government domination, the usual practice of withholding information, are incompatible. Besides being male, positively associated with information transparency, the remaining demographic variables do not display a clear pattern.
 
@@ -105,11 +105,13 @@ The above figure displays 9 out of 12 topics’ word clouds:
 - Topic 2 focuses on politicians and parties, including 政客(politicians), 政党 (political parties), and 党同伐异 (factionalism);
 - Topic 3 is primarily about 国与国 (state-to-state);
 - Topic 4 involves 乌鲁克 (Uruk) and 苏美尔 (Sumerian);
-- Topic 5 and 9 are similar and encompass [Sun Yat-sen’s](https://en.wikipedia.org/wiki/Three_Principles_of_the_People) 民权主义 (Government by the People) and 民生主义 (People's welfare/livelihood). Topic 5 exclusively contains 正统 (orthodoxy) and [汉奸](https://en.wikipedia.org/wiki/Hanjian) (a pejorative term for a traitor to the Han Chinese), while topic 9 leans towards 特权 (privilege) and 阶级矛盾 (class conflict);
-- Topic 6 sheds light on ancestors (祖宗) and [夷](https://en.wiktionary.org/wiki/%E5%A4%B7#Definitions) (barbarian/foreigners) on the one side, and 无产者 (Proletariat) on the other;
+- Topic 5 and 9 are similar and encompass [Sun Yat-sen’s](https://en.wikipedia.org/wiki/Three_Principles_of_the_People) 民权主义 (Government by the People) and 民生主义 (People's welfare/livelihood). Topic 5 exclusively contains 正统 (orthodoxy), 立国之本 (the state's foundation), 自豪 (proud), and[汉奸](https://en.wikipedia.org/wiki/Hanjian) (a pejorative term for a traitor to the Han Chinese), while topic 9 leans towards 特权 (privilege) and 阶级矛盾 (class conflict);
+- Topic 6 sheds light on 祖宗 (ancestors) and [夷](https://en.wiktionary.org/wiki/%E5%A4%B7#Definitions) (barbarian/foreigners) on the one side, and 无产者 (Proletariat) on the other;
 - Topic 7 is about 犹太人 (Jewish) and 以色利 (Israel), both of which are closely related to Zionism;
 - Topic 8 is similar to topic 5 in terms of 卖国 and 狗, and both are traitors’ different expressions in Chinese.
 
 ## Discussion
+Attitudes towards democracy, market, and nationalism essentially constitute China’s ideological landscape. In short, when Chinese talk about nationalism, they are reminding themselves of the orthodoxy Han (Han, proud, and ), in contempt of the traitor (in the Japanese invasion and now), and inheriting the Sun Yat-sen’s snd socialist legacy. Moreover, [Cantoni et al.'s study](https://www.journals.uchicago.edu/doi/abs/10.1086/690951) sheds light on how mandatory high school politics curricula might shape students’ ideology. They ﬁnd that the new curriculum introduced in 2005 has successfully changed students’ attitudes in the Chinese government’s direction. Students exposed to the new curriculum generally see China as more democratic and express skepticism towards the unconstrained democracy and free markets.
 
-Attitudes towards democracy, market, nationalism largely constitute China’s ideological landscape. To look at discourses closely, we may realize ethnicity (Han, Zionism, and traitor), international relations (state-to-state and Imperialism), Sun Yat-sen, and Socialist’s legacy play a pivotal role in shaping people’s understanding of nationalism.
+
+More than 80% of respondents have received a college degree or above, so we may need to realize the implicit selection bias for those finishing the zuobiao survey. The “fictitious average respondent” could be far more liberal, market-oriented, and less nationalist than it could be. Given the political constraints in China, it is more challenging to acquire the data. Meanwhile, making sense of China’s ideological landscape and dynamics are indispensable for anyone attempting to understand China.
