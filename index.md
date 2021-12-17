@@ -58,6 +58,14 @@ Other than the survey data, the study obtains the data from Zhihu by a scraper. 
 
 The study manually creates synthetic indices based on questions revolving around the same theme. Building on previous studies, the survey questions are classified into seven themes: _Democracy_, _Freedom_, _Market_, _Socialism_, _Globalization_, _Traditionalism_, and _Nationalism_. Each question is labeled as +1 to represent the support and -1 to represent the non-support of one specific theme. Each index is a combination of such values. The mean of each index is 0.128 for _Democracy_, -0.525 for _Freedom_, -0.506 for _Market_, 1,556 for _Socialism_, -1.057 for _Globalization_, 0.755 for _Traditionalism_, and 1.007 for _Nationalism_. These metrics portray a fictitious average respondent in China: one slightly favors democracy, looks slightly conservative, believes socialism and traditional Chinese culture, prioritizes nationalism, and is suspicious of the free market and economic globalization.
 
+<div>
+  <div style="position:relative;padding-top:56.25%;">
+    <iframe iframe src="dataviz/corrmatrix.html" frameborder="0" scrolling="yes"
+    title="Survey Map" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+  </div>
+  <figcaption font-size="12px"> The figure displays the distribution of each index.</figcaption>
+</div>
+
 To better make the inferences, here employs the logistic regression under L1-regularization for feature selections. The model is displayed as below:
 
 $$\mbox{Pr}(Q=1|X=x)=\frac{e^{\beta_0+\beta^Tx}}{1+e^{\beta_0+\beta^Tx}},$$
